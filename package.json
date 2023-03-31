@@ -2,5 +2,8 @@
   "dependencies": {
     "@types/p5": "^1.6.0",
     "p5": "^1.6.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7"
   }
 }
