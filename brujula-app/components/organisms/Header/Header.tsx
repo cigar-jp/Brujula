@@ -1,5 +1,8 @@
+import { Montserrat } from 'next/font/google';
 import Link from 'next/link';
 import styled from 'styled-components';
+
+const montserrat = Montserrat({ weight: ['200'], subsets: ['cyrillic'] });
 
 const Wrapper = styled.header`
   width: 100%;
@@ -11,11 +14,6 @@ const Wrapper = styled.header`
   border-bottom: 1px solid #ccc;
 `;
 
-const Name = styled.h1`
-  font-weight: 200;
-  color: dimgray;
-`;
-
 const Nav = styled.nav`
   display: flex;
   align-items: center;
@@ -25,8 +23,9 @@ const Nav = styled.nav`
 export const Header = () => {
   return (
     <Wrapper>
-      <Name>Ryo Shiga</Name>
+      <h1 className={montserrat.className}>Ryo Shiga</h1>
       <Nav>
+        <Link href="/">HOME</Link>
         <Link href="/about">ABOUT</Link>
         <Link href="/works">WORKS</Link>
         <Link href="https://www.youtube.com/pboychannel">YOUTUBE</Link>
