@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 
 const AvoidSSRBubbles = dynamic(
-  async () => (await import('@@/components/atoms/Square/Bubbles')).Bubbles,
+  async () => (await import('@@/components/atoms/Bubbles/Bubbles')).Bubbles,
   { ssr: false }
 );
 
