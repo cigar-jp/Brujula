@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import styled from 'styled-components';
-import { Header } from '@@/components/organisms/Header';
 import styles from '../styles/Home.module.css';
+import { Header } from '@@/components/organisms/Header';
+import styled from 'styled-components';
 
 const Container = styled.div`
   min-height: 100vh;

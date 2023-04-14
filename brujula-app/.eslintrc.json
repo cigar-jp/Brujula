@@ -159,52 +159,52 @@
     // 非相対パスで記述した内部モジュールのコンポーネントを相対パスモジュールの直前に、
     // CSS Modules ファイルのインポートを最後にするよう設定
     // import from `xxx` 形式の記述は eslint-plugin-import が認識できないため、通常の CSS ファイルのインポート文はソート不可
-    "import/order": [
-      "error",
-      {
-        "groups": [
-          "type",
-          "builtin",
-          "external",
-          "internal",
-          ["parent", "sibling"],
-          "object",
-          "index"
-        ],
-        "pathGroups": [
-          // type のインポートを最上部に配置、ただし @types/** からのインポートは外部インポートのあとに配置
-          {
-            "pattern": "@/types/**",
-            "group": "type",
-            "position": "after"
-          },
-          // @/ からインポートするファイルをグルーピング
-          {
-            "pattern": "{@/**}",
-            "group": "internal",
-            "position": "before"
-          },
-          // 非相対パスで記述した内部モジュールのコンポーネントを相対パスモジュールの直前に配置
-          {
-            "pattern": "{[A-Z]*,**/[A-Z]*}",
-            "group": "internal",
-            "position": "after"
-          },
-          // @@/ からインポートするファイルを一番最後に配置
-          {
-            "pattern": "@@/**",
-            "group": "index",
-            "position": "after"
-          }
-        ],
-        "newlines-between": "never",
-        "pathGroupsExcludedImportTypes": ["builtin"],
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        }
-      }
-    ],
+    // "import/order": [
+    //   "error",
+    //   {
+    //     "groups": [
+    //       "type",
+    //       "builtin",
+    //       "external",
+    //       "internal",
+    //       ["parent", "sibling"],
+    //       "object",
+    //       "index"
+    //     ],
+    //     "pathGroups": [
+    //       // type のインポートを最上部に配置、ただし @types/** からのインポートは外部インポートのあとに配置
+    //       {
+    //         "pattern": "@/types/**",
+    //         "group": "type",
+    //         "position": "after"
+    //       },
+    //       // @/ からインポートするファイルをグルーピング
+    //       {
+    //         "pattern": "{@/**}",
+    //         "group": "internal",
+    //         "position": "before"
+    //       },
+    //       // 非相対パスで記述した内部モジュールのコンポーネントを相対パスモジュールの直前に配置
+    //       {
+    //         "pattern": "{[A-Z]*,**/[A-Z]*}",
+    //         "group": "internal",
+    //         "position": "after"
+    //       },
+    //       // @@/ からインポートするファイルを一番最後に配置
+    //       {
+    //         "pattern": "@@/**",
+    //         "group": "index",
+    //         "position": "after"
+    //       }
+    //     ],
+    //     "newlines-between": "never",
+    //     "pathGroupsExcludedImportTypes": ["builtin"],
+    //     "alphabetize": {
+    //       "order": "asc",
+    //       "caseInsensitive": true
+    //     }
+    //   }
+    // ],
 
     // displayName コンポーネントのプロパティで、デバッグメッセージでコンポーネントを明示するのに使用
     // これがなくてもほとんどの場合はコンポーネントを特定できるため無効化
