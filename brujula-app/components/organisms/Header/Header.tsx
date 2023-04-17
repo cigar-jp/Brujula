@@ -71,8 +71,6 @@ export const Header = () => {
 
         <Link href="/works">WORKS</Link>
 
-        <Link href="/resume">Resume</Link>
-
         <Link href="https://www.youtube.com/pboychannel">YOUTUBE</Link>
       </Nav>
     </Wrapper>
